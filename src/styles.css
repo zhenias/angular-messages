@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.example-container {
+  height: 100vh; /* Pełna wysokość okna przeglądarki */
+  display: flex;
+}
+
+mat-sidenav {
+  width: 250px; /* Szerokość menu bocznego */
+}
+
+mat-sidenav-content {
+  padding: 16px;
+  background-color: #f5f5f5; /* Tło dla zawartości */
+}
+
+.example-menu {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 180px;
+  max-width: 280px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px 0;
+}
+
+.example-menu-item {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  user-select: none;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+
+  color: black;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+}
+
+.example-menu-item:hover, .active-link {
+  background-color: rgb(208, 208, 208);
+}
+
+.example-menu-item:active {
+  background-color: rgb(170, 170, 170);
+}
+
+.error-bar {
+  position: fixed;
+  bottom: 1rem; /* Ustawienie paska na dole */
+  left: 1rem;   /* Ustawienie paska z lewej strony */
+  z-index: 1000; /* Zapewnia widoczność nad innymi elementami */
+  background-color: #f44336; /* Kolor tła (czerwony) */
+  color: white; /* Kolor tekstu */
+  padding: 1rem; /* Odstępy wewnętrzne */
+  border-radius: 0.5rem; /* Zaokrąglenie rogów */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
+}
+
+.error-bar button {
+  background: white; /* Tło przycisku */
+  color: #f44336; /* Kolor tekstu przycisku */
+  border: none; /* Bez obramowania */
+  padding: 0.5rem; /* Odstępy wewnętrzne przycisku */
+  margin-left: 1rem; /* Odstęp od tekstu */
+  border-radius: 0.25rem; /* Zaokrąglenie rogów przycisku */
+  cursor: pointer; /* Zmiana kursora na wskazujący */
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,46 @@
+<h1 class="text-xl font-bold">Kosz</h1>
+
+<app-loader *ngIf="isLoading" />
+
+<br>
+
+<div *ngIf="!isLoading">
+  <table class="bg-white min-w-full table-auto rounded-xl overflow-hidden text-sm text-left text-gray-700 border border-gray-100 shadow-lg">
+    <thead class="bg-blue-100 text-blue-800 uppercase text-xs">
+      <tr>
+        <th class="px-4 py-2 text-center text-sm font-semibold text-gray-600">Nadawca</th>
+        <th class="px-4 py-2 text-center text-sm font-semibold text-gray-600">Temat</th>
+        <th class="py-2 text-center text-sm font-semibold text-gray-600" style="width: 200px">Data</th>
+        <th class="px-4 py-2 text-center text-sm font-semibold text-gray-600" style="width: 10%">Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="wiadomosci.length === 0">
+        <td class="px-4 py-2 text-sm text-gray-800" colspan="4">Brak wiadomości w koszu.</td>
+      </tr>
+      <tr *ngFor="let wiadomosc of wiadomosci" class="border-b hover:bg-blue-50 transition">
+        <td class="px-4 py-2 text-sm text-gray-800">{{ wiadomosc.from }}</td>
+        <td class="px-4 py-2 text-sm text-gray-800">{{ wiadomosc.topic }}</td>
+        <td class="px-4 py-2 text-sm text-gray-800">{{ wiadomosc.date }}</td>
+        <td class="px-4 py-2 text-sm text-gray-800">
+          <button class="bg-blue-500 text-white px-4 py-1 rounded-full shadow hover:bg-blue-600 transition" (click)="pokazWiadomoscRouter(wiadomosc.id)">
+            Otwórz
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="totalPages != 1" class="pagination flex justify-center items-center p-4 space-x-2">
+    <button (click)="goToPage(currentPage - 1)" [hidden]="currentPage === 1" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition">
+      Poprzednia
+    </button>
+    <ng-container *ngFor="let page of [].constructor(totalPages); let i = index">
+      <button (click)="goToPage(i + 1)" [class.bg-blue-500]="currentPage === i + 1" [class.text-black]="currentPage === i + 1" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition">
+        {{ i + 1 }}
+      </button>
+    </ng-container>
+    <button (click)="goToPage(currentPage + 1)" [hidden]="currentPage === totalPages" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition">
+      Następna
+    </button>
+  </div>
+</div>
