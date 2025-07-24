@@ -5,4 +5,5 @@ export interface RoleMessage {
   sekretarz: { id: number; name?: string }[];
   zastepstwa: { id: number; name?: string }[];
   pedagog: { id: number; name?: string }[];
+  pomoc: { id: number, name?: string }[];
 }

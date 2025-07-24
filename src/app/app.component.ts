@@ -74,7 +74,7 @@ export class AppComponent {
 
   protected setHeaderAuthorization(): HttpHeaders {
     const accessTokenCookie = this.getCookie('_token');
-    this.access_token = accessTokenCookie || 'a938a437dfa42838af5a99f3a3f9e11d6da5de69c228ba5666d398456e42d0eb';
+    this.access_token = accessTokenCookie || '4ef9cf84c140e2c58997a5321b40b2ab3a4164f0d414acfbda182cef0e9e5703';
 
     return new HttpHeaders({
       'Authorization': `Bearer ${this.access_token}`,

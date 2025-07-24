@@ -99,7 +99,7 @@
     <h3 id="modal-title" class="text-lg font-bold mb-4">Grupy użytkowników</h3>
 
     <ul class="space-y-4">
-      <ng-container *ngFor="let grupa of ['pracownicy', 'dyrektor', 'sekretarz', 'zastepstwa', 'pedagog']">
+      <ng-container *ngFor="let grupa of ['pracownicy', 'dyrektor', 'sekretarz', 'zastepstwa', 'pedagog', 'pomoc']">
         <li *ngIf="role?.[grupa]?.length">
           <button
             type="button"

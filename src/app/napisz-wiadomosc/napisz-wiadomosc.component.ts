@@ -27,6 +27,7 @@ export class NapiszWiadomoscComponent extends AppComponent {
     sekretarz: [],
     zastepstwa: [],
     pedagog: [],
+    pomoc: []
   };
 
   public wybraniUzytkownicy: number[] = [];

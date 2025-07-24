@@ -50,7 +50,7 @@
       </ul>
     </div>
 
-<!--    <div class="flex flex-wrap gap-4 pt-4 border-t mt-4">-->
+    <div class="flex flex-wrap gap-4 pt-4 border-t mt-4">
 <!--      <button *ngIf="!nowaWiadomosc.owner_deleted && nowaWiadomosc.users"-->
 <!--              class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition"-->
 <!--              (click)="wycofajWiadomosc()">Wycofaj</button>-->
@@ -59,13 +59,13 @@
 <!--              class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition"-->
 <!--              (click)="przywrocWiadomosc()">Przywróć</button>-->
 
-<!--      <button *ngIf="!nowaWiadomosc.users"-->
-<!--              class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"-->
-<!--              (click)="przeslijWiadomosc()">Prześlij</button>-->
+      <button *ngIf="!nowaWiadomosc.users"
+              class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+              (click)="przeslijWiadomosc()">Prześlij</button>
 
-<!--      <button *ngIf="!nowaWiadomosc.users"-->
-<!--              class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"-->
-<!--              (click)="odpowiedzNaWiadomosc()">Odpowiedz</button>-->
+      <button *ngIf="!nowaWiadomosc.users"
+              class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
+              (click)="odpowiedzNaWiadomosc()">Odpowiedz</button>
 
 <!--      <button *ngIf="!nowaWiadomosc.users && !nowaWiadomosc.is_deleted"-->
 <!--              class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition"-->
@@ -74,6 +74,6 @@
 <!--      <button *ngIf="!nowaWiadomosc.users && nowaWiadomosc.is_deleted"-->
 <!--              class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition"-->
 <!--              (click)="przywrocWiadomosc()">Przywróć z kosza</button>-->
-<!--    </div>-->
+    </div>
   </div>
 </div>
